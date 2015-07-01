@@ -1,0 +1,10 @@
+{
+	"/": {
+		"controller": "test",
+		"action": "main"
+	},
+	"/login": {
+		"controller": "test",
+		"action": "login"
+	}
+}
