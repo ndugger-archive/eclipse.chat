@@ -1,5 +1,3 @@
-let socket = io();
-
 class ChatClient
 {
 	static main()
@@ -12,7 +10,7 @@ class ChatClient
 		{
 			e.preventDefault();
 			socket.emit('chatsubmit', JSON.stringify({
-				username: 'Nick',
+				username: 'Chief',
 				text: input.value
 			}));
 			input.value = '';

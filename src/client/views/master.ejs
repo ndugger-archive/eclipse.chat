@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Socket.IO chat</title>
+		<title>Eclipse.chat</title>
 		<style>
 			* { margin: 0; padding: 0; box-sizing: border-box; }
 			body { font: 13px Helvetica, Arial; }
@@ -12,13 +12,13 @@
 			#messages li { padding: 5px 10px; }
 			#messages li:nth-child(odd) { background: #eee; }
 		</style>
+		<link href="/public/css/global.css" rel="stylesheet" />
 		<script src="/socket.io/socket.io.js"></script>
-		<script src="/public/js/build/client.js"></script>
+		<script>socket = io();</script>
+		<script src="/public/js/client.js"></script>
 	</head>
 	<body>
-		<ul id="messages"></ul>
-		<form id="chatform">
-			<input id="chatinput" autocomplete="off" /><button>Send</button>
-		</form>
+		<%- partial("partials/header") %>
+		<%- body %>
 	</body>
 </html>
