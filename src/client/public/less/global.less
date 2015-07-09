@@ -1,14 +1,57 @@
 body {
-	background:#fefefe;
+	margin: 0;
+	background: #DDD;
+	font-family: "Arial", sans-serif;
+}
 
-	header {
-		background:red;
-		color:#FFF;
-		font-weight:bold;
+#messages {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	bottom: 80px;
+
+	.message {
+		padding:8px;
+
+		&:nth-child(even) {
+			background:#EEE;
+		}
+	}
+}
+
+#chatForm {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: calc(~"100% - 16px");
+	height: 64px;
+	padding: 8px;
+	background: #AAA;
+
+	textarea {
+		width: calc(~"100% - 74px");
+		height: 64px;
+		padding: 0;
+		margin: 0;
+		border: none;
+		outline: none;
+		resize: none;
+		float:left;
+
+		&:focus {
+			box-shadow: 0 0 1px blue;
+		}
 	}
 
-	ul {
-		background:#FFF;
-		border:1px solid #CCC;
+	button {
+		height: 64px;
+		width:64px;
+		padding: 0;
+		margin: 0;
+		float:right;
 	}
 }

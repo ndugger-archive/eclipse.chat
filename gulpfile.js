@@ -53,4 +53,5 @@ gulp.task('deploy', function() {
 
 });
 
-gulp.task('default', ['build server', 'build client'], function() {});
+gulp.task('default', ['build server', 'build client']);
+gulp.task('build', ['default']);

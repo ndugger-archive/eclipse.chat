@@ -1,0 +1,15 @@
+<% layout("master") %>
+
+<ul id="messages" data-channel-id="<%- channel.id %>">
+	<% messages.forEach(function(message) { %>
+		<li class="message" data-message-id="<%- message.id %>">
+			<b data-user-id="<%- message.userid %>"><%- message.username %>:</b> 
+			<%- message.text %>
+		</li>
+	<% }) %>
+</ul>
+
+<form id="chatForm">
+	<textarea></textarea>
+	<button>Send</button>
+</form>

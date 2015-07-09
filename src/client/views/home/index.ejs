@@ -1,6 +1,12 @@
 <% layout("master") %>
 
-<ul id="messages"></ul>
-<form id="chatform">
-	<input id="chatinput" autocomplete="off" /><button>Send</button>
-</form>
+<h4>Channels:</h4>
+<ul id="channelList">
+	<% for(var i = 0; i < channels.length; i++) { %>
+		<li class="channel" id="room<%- channels[i].id %>">
+			<a href="/channel/<%- channels[i].id %>/<%- channels[i].slug %>"><%- channels[i].name %></a>
+			<br/>
+			<%- channels[i].description %>
+		</li>
+	<% } %>
+</ul>

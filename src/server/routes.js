@@ -7,5 +7,9 @@ export default
 	"/login": {
 		controller: "home",
 		action: "login"
+	},
+	"/channel/:id/:slug": {
+		controller: "channel",
+		action: "main"
 	}
 }

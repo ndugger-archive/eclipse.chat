@@ -1,7 +1,13 @@
 export default class Home
 {
-	static main(request, response)
+	static main(request, response, db)
 	{
-		response.render('home/index');
+		db.find('channels').then(results =>
+		{
+			response.render('home/index',
+			{
+				channels: results
+			});
+		});
 	}
 }
